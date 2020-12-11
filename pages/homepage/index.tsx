@@ -4,12 +4,19 @@ export default function Home({ launch }) {
   console.log(launch)
 
   return (
-    <h1>This is the home page</h1>
+    <div>
+      <h1>Launches</h1>
+      {launch.map(data => {
+        return (
+          <div>{data.flight_number}</div>
+        )
+      })}
+    </div>
   );
 };
 
 Home.getInitialProps = async function() {
-  const res = await fetch('https://api.spacexdata.com/v4/launches/latest');
+  const res = await fetch('https://api.spacexdata.com/v4/launches/');
   const launch = await res.json();
 
   return { launch }
