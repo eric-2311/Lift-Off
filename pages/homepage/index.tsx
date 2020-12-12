@@ -1,14 +1,13 @@
 import fetch from 'isomorphic-unfetch';
 
 export default function Home({ launch }) {
-  console.log(launch)
-
+  // console.log(launch)
   return (
     <div>
-      <h1>Launches</h1>
-      {launch.map(data => {
+      <h1>SpaceX Launches</h1>
+      {launch.map((data, i) => {
         return (
-          <div>{data.flight_number}</div>
+          <div key={i}>{data.name}</div>
         )
       })}
     </div>
