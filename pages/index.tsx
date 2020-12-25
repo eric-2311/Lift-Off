@@ -21,31 +21,26 @@ export async function getStaticProps() {
 }
 
 export default function Home({ launches }) {
-  console.log(launches)
+  console.log(Date.now())
   return (
     <div>
       <h1>SpaceX Launches</h1>
       <ul className={styles.list}>
         {launches.map(launch => (
-          <li key={launch.sys.id} className={styles.listItem}>
-            <Card 
-            className={styles.card}
-            onClick={() => {
-              // <Link href={'/launches/' + launch.fields.slug}/>
-            }}>
-            <p className={styles.title}>{launch.fields.name}</p>
-            <p className={styles.details}>{launch.fields.launchDetails}</p>
-          </Card>
+          <Link href={'/launches/' + launch.sys.id} key={launch.sys.id}>
+          <li className={styles.listItem}>
+              <Card className={styles.card}>
+                <p className={styles.title}>{launch.fields.name}</p>
+                {/* <p className={styles.details}>{launch.fields.launchDetails}</p> */}
+                  <Card className={styles.cardOpen}>
+                    <p className={styles.title}>{launch.fields.name}</p>
+                    <p className={styles.details}>{launch.fields.launchDetails}</p>
+                  </Card>
+              </Card>
           </li>
+          </Link>
         ))}
       </ul>
     </div>
   );
 };
-
-// Home.getInitialProps = async function() {
-//   const res = await fetch('https://api.spacexdata.com/v4/launches/');
-//   const launch = await res.json();
-
-//   return { launch }
-// }

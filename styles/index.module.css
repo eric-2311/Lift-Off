@@ -1,12 +1,13 @@
 .card {
     width: 150px;
     height: 30px;
+    position: relative;
 }
 
-.card:hover {
-    height: 300px;
+.cardOpen {
+    display: none;
+    height: 250px;
     width: 300px;
-    position: absolute;
     z-index: 1;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
                 0 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -16,6 +17,13 @@
                 0 100px 80px rgba(0, 0, 0, 0.07);
 }
 
+.card:hover .cardOpen {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
 .title {
     margin: auto;
     text-align: center;
@@ -23,6 +31,8 @@
 
 .list {
     display: flex;
+    width: 100%;
+    flex-wrap: wrap;
     position: relative;
 }
 
