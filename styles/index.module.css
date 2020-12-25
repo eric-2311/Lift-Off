@@ -1,0 +1,29 @@
+.card {
+    width: 100px;
+    height: 20px;
+}
+
+.card:hover {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+}
+
+.list {
+    display: flex;
+    position: relative;
+}
+
+.listItem {
+    list-style: none;
+    padding: 10px;
+}
+
+.details {
+    display: none;
+}
+
+.details:hover {
+    display: block;
+}
