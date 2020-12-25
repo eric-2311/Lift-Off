@@ -1,3 +1,14 @@
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    width: 40%;
+    /* padding: 20px; */
+    margin: auto;
+}
+
 .card {
     width: 150px;
     height: 30px;
@@ -6,8 +17,8 @@
 
 .cardOpen {
     display: none;
-    height: 250px;
-    width: 300px;
+    height: 300px;
+    width: 250px;
     z-index: 1;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
                 0 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -19,6 +30,7 @@
 
 .card:hover .cardOpen {
     position: absolute;
+    cursor: pointer;
     display: block;
     top: 0;
     left: 0;
@@ -31,7 +43,7 @@
 
 .list {
     display: flex;
-    width: 100%;
+    width: 600px;
     flex-wrap: wrap;
     position: relative;
 }
