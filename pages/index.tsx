@@ -27,13 +27,13 @@ export default function Home({ launches }) {
       <h1>SpaceX Launches</h1>
       <ul className={styles.list}>
         {launches.map(launch => (
-          <li className={styles.listItem}>
-            <Card key={launch.sys.id}
+          <li key={launch.sys.id} className={styles.listItem}>
+            <Card 
             className={styles.card}
             onClick={() => {
               // <Link href={'/launches/' + launch.fields.slug}/>
             }}>
-            {launch.fields.name}
+            <p className={styles.title}>{launch.fields.name}</p>
             <p className={styles.details}>{launch.fields.launchDetails}</p>
           </Card>
           </li>
