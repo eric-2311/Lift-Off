@@ -3,9 +3,12 @@
     flex-direction: row;
 }
 
+.logo {
+    text-align: center;
+}
+
 .section {
     width: 40%;
-    /* padding: 20px; */
     margin: auto;
 }
 
@@ -13,13 +16,15 @@
     width: 150px;
     height: 30px;
     position: relative;
+    /* transition: all 1s; */
 }
 
 .cardOpen {
     display: none;
-    height: 300px;
-    width: 250px;
+    /* height: 300px;
+    width: 250px; */
     z-index: 1;
+    /* transition: all 1s; */
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
                 0 6.7px 5.3px rgba(0, 0, 0, 0.028),
                 0 12.5px 10px rgba(0, 0, 0, 0.035),
@@ -30,6 +35,8 @@
 
 .card:hover .cardOpen {
     position: absolute;
+    height: 300px;
+    width: 250px;
     cursor: pointer;
     display: block;
     top: 0;

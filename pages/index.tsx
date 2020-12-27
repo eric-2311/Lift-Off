@@ -21,13 +21,14 @@ export async function getStaticProps() {
 }
 
 export default function Home({ launches }) {
-  // console.log(Date.now())
+  console.log(launches)
   return (
     <div>
-      <h1 className={styles.logo}>SpaceX Launches</h1>
+      
       <div className={styles.pageContainer}>
         <ul className={styles.list}>
           {launches.map(launch => (
+            // console.log(launch)
             <Link href={'/launches/' + launch.sys.id} key={launch.sys.id}>
               <li className={styles.listItem}>
                   <Card className={styles.card}>
@@ -45,6 +46,7 @@ export default function Home({ launches }) {
           ))}
         </ul>
         <section className={styles.section}>
+          <h1 className={styles.logo}>SpaceX Launches</h1>
           Discover more Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor incididunt ut 
           labore et dolore magna aliqua. Ut enim ad minim veniam, 
