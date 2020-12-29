@@ -24,7 +24,7 @@ export async function getStaticProps() {
 export default function Home({ launches }) {
   // console.log(launches)
   return (
-    <div className={styles.body}>
+    <div>
       
       <div className={styles.pageContainer}>
         <ul className={styles.list}>
