@@ -15,7 +15,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      launches: data.items
+      launches: data.items,
+      revalidate: 1
     }
   }
 }

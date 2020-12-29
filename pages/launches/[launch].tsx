@@ -12,7 +12,7 @@ export async function getStaticPaths() {
         paths: data.items.map(launch => ({
             params: { launch: launch.sys.id }  
         })),
-        fallback: false
+        fallback: true
     }
 }
 
@@ -25,12 +25,13 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             launch: data.items[0]
-        }
+        },
+        revalidate: 1
     }
 }
 
 export default function Launch({ launch }) {
-    console.log(launch)
+    if (!launch) return <div>404</div>
 
     function getLocalDate(date) {
 
@@ -40,9 +41,11 @@ export default function Launch({ launch }) {
         <div>
             <h1>{launch.fields.name}</h1>
             <p>{launch.fields.launchDate}</p>
-            <section>{launch.fields.missionSuccess ? 
+            <section>
+                <p>{launch.fields.missionSuccess ? 
                 'Mission Success' : 
-                'Mission Failed'}</section>
+                'Mission Failed'}</p>
+            </section>
             <p>
                 {launch.fields.launchDetails ? 
                 launch.fields.launchDetails : 
