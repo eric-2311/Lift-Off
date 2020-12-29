@@ -22,23 +22,20 @@ export async function getStaticProps() {
 }
 
 export default function Home({ launches }) {
-  // console.log(launches)
   return (
     <div>
-      
       <div className={styles.pageContainer}>
         <ul className={styles.list}>
           {launches.map(launch => (
-            // console.log(launch)
             <Link href={'/launches/' + launch.sys.id} key={launch.sys.id}>
               <li className={styles.listItem}>
                   <Card className={styles.card}>
-                    <p className={styles.title}>{launch.fields.name}</p>
+                    <p className={styles.title}><i>{launch.fields.name}</i></p>
                       <Card className={styles.cardOpen}>
                         <p className={styles.title}>{launch.fields.name}</p>
                         <p className={styles.details}>
                           {launch.fields.launchDetails ? 
-                            launch.fields.launchDetails : <i>Unknown</i>}
+                            launch.fields.launchDetails.slice(0, 300) + '...' : <i>Unknown</i>}
                         </p>
                       </Card>
                   </Card>
@@ -47,15 +44,41 @@ export default function Home({ launches }) {
           ))}
         </ul>
         <section className={styles.section}>
-          <h1 className={styles.logo}>SpaceX Launches</h1>
-          <p className={styles.text}>Discover more Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut 
-          labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip e
-          x ea commodo consequat. Duis aute irure dolor in reprehenderit 
-          in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-          qui officia deserunt mollit anim id est laborum.</p>
+          <h1 className={styles.logo}><i>Welcome to the SpaceX Mission Log</i></h1>
+          <p className={styles.text}>
+            <i>
+              "In order for us to have a future that's exciting and inspiring, it has to be 
+              one where we're a space-bearing civilization"
+              <br/> 
+              - Elon Musk
+            </i>
+          </p>
+          <p className={styles.text}>
+            <i>
+              “I know the sky is not the limit because there are footprints on the Moon — and I 
+              made some of them!”
+              <br/> 
+              - Buzz Aldrin
+            </i>
+          </p>
+          <p className={styles.text}>
+            <i>
+              "That's one small step for a man, one giant leap for man-kind"
+              <br/> 
+              - Louis Armstrong
+            </i>
+          </p>
+          <p className={styles.text}>
+            <i>
+              “We choose to go to the moon in this decade and do the other things, not because 
+              they are easy, but because they are hard, because that goal will serve to organize 
+              and measure the best of our energies and skills, because that challenge is one that 
+              we are willing to accept, one we are unwilling to postpone, and one which we intend 
+              to win.”
+              <br/> 
+              - John F. Kennedy
+            </i>
+          </p>
         </section>
       </div>
     </div>
