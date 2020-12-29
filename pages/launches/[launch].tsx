@@ -9,7 +9,7 @@ export async function getStaticPaths() {
     })
 
     return {
-        paths: data.items.map((launch) => ({
+        paths: data.items.map(launch => ({
             params: { launch: launch.sys.id }  
         })),
         fallback: false

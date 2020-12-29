@@ -23,7 +23,7 @@ export async function getStaticProps() {
 export default function Home({ launches }) {
   // console.log(launches)
   return (
-    <div>
+    <div className={styles.body}>
       
       <div className={styles.pageContainer}>
         <ul className={styles.list}>
@@ -47,14 +47,14 @@ export default function Home({ launches }) {
         </ul>
         <section className={styles.section}>
           <h1 className={styles.logo}>SpaceX Launches</h1>
-          Discover more Lorem ipsum dolor sit amet, consectetur
+          <p className={styles.text}>Discover more Lorem ipsum dolor sit amet, consectetur
           adipiscing elit, sed do eiusmod tempor incididunt ut 
           labore et dolore magna aliqua. Ut enim ad minim veniam, 
           quis nostrud exercitation ullamco laboris nisi ut aliquip e
           x ea commodo consequat. Duis aute irure dolor in reprehenderit 
           in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
           Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-          qui officia deserunt mollit anim id est laborum.
+          qui officia deserunt mollit anim id est laborum.</p>
         </section>
       </div>
     </div>

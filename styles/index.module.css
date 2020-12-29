@@ -5,6 +5,7 @@
 
 .logo {
     text-align: center;
+    color: white;
 }
 
 .section {
@@ -64,6 +65,17 @@
     display: none;
 }
 
+.text {
+    color: white;
+}
+
 .card:hover .details {
     display: block;
+}
+
+.body {
+    background-image: url('../public//pexels-jacub-gomez-1142950.jpg');
+    background-size: cover;
+    /* position: relative; */
+    /* border: 1px solid black; */
 }
