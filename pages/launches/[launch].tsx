@@ -7,20 +7,19 @@ export async function getStaticPaths() {
     let data = await client.getEntries({
         content_type: 'launch'
     })
-    
+
     return {
-        // paths: data.items.map((launch) => ({
-        //     params: { id: launch.sys.id.toString() }  
-        // })),
-        // fallback: false
-        paths : [],
+        paths: data.items.map((launch) => ({
+            params: { launch: launch.sys.id }  
+        })),
         fallback: false
     }
 }
 
 export async function getStaticProps({ params }) {
     let data = await client.getEntries({
-        content_type: 'launch'
+        content_type: 'launch',
+        'sys.id': params.launch
     })
 
     return {
@@ -32,5 +31,23 @@ export async function getStaticProps({ params }) {
 
 export default function Launch({ launch }) {
     console.log(launch)
-    return <div>Launch</div>
+
+    function getLocalDate(date) {
+
+    }
+
+    return (
+        <div>
+            <h1>{launch.fields.name}</h1>
+            <p>{launch.fields.launchDate}</p>
+            <section>{launch.fields.missionSuccess ? 
+                'Mission Success' : 
+                'Mission Failed'}</section>
+            <p>
+                {launch.fields.launchDetails ? 
+                launch.fields.launchDetails : 
+                "Mission details unknown."}
+            </p>
+        </div>
+    )
 }

@@ -21,7 +21,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ launches }) {
-  console.log(launches)
+  // console.log(launches)
   return (
     <div>
       
