@@ -1,4 +1,5 @@
 import ReactPlayer from 'react-player';
+import { useState } from 'react'
 
 const client = require("contentful").createClient({
     space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -33,11 +34,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Launch({ launch }) {
+    const [isPlaying, setPlaying] = useState(true)
+
     if (!launch) return <div>404</div>
 
-    function getLocalDate(date) {
+    // function getLocalDate(date) {
 
-    }
+    // }
 
     return (
         <div>
@@ -53,7 +56,12 @@ export default function Launch({ launch }) {
                 launch.fields.launchDetails : 
                 "Mission details unknown."}
             </p>
-            <ReactPlayer url={launch.fields.webcastVideoUrl} />
+            <p>Rocket Type: {launch.fields.rocketType[0].toUpperCase() +
+                launch.fields.rocketType.slice(1, launch.fields.rocketType.length)}
+            </p>
+            <ReactPlayer 
+                url={launch.fields.webcastVideoUrl} 
+                playing={isPlaying}/>
         </div>
     )
 }

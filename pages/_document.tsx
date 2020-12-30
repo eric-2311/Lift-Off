@@ -3,8 +3,10 @@ import Document, { Head, Main, Html, NextScript } from 'next/document';
 export default class CustomDocument extends Document {
     render() {
         return (
-            <Html>
-                <Head></Head>
+            <Html lang="en-US">
+                <Head>
+                    <title>SpaceX Log</title>
+                </Head>
                 <body>
                     <Main/>
                     <NextScript/>

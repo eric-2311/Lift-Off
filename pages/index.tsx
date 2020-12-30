@@ -44,7 +44,6 @@ export default function Home({ launches }) {
           ))}
         </ul>
         <section className={styles.section}>
-          <h1 className={styles.logo}><i>Welcome to the SpaceX Mission Log</i></h1>
           <p className={styles.text}>
             <i>
               "In order for us to have a future that's exciting and inspiring, it has to be 
