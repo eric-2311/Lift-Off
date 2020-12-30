@@ -63,18 +63,10 @@
     padding: 10px;
 }
 
-.details {
-    display: none;
-}
-
 .text {
     color: white;
     text-align: center;
     padding-bottom: 50px;
-}
-
-.card:hover .details {
-    display: block;
 }
 
 .section {

@@ -23,22 +23,24 @@ export async function getStaticProps() {
 
 export default function Home({ launches }) {
   return (
-    <div>
       <div className={styles.pageContainer}>
         <ul className={styles.list}>
           {launches.map(launch => (
             <Link href={'/launches/' + launch.sys.id} key={launch.sys.id}>
               <li className={styles.listItem}>
                   <Card className={styles.card}>
-                    <p className={styles.title}><i>{launch.fields.name}</i></p>
-                      <Card className={styles.cardOpen}>
-                        <p className={styles.title}>{launch.fields.name}</p>
-                        <p className={styles.details}>
-                          {launch.fields.launchDetails ? 
-                            launch.fields.launchDetails.slice(0, 300) + '...' : <i>Unknown</i>}
-                        </p>
-                      </Card>
+                    <p className={styles.title}>
+                      <i>{launch.fields.name}</i>
+                    </p>
+                    <Card className={styles.cardOpen}>
+                      <p className={styles.title}>{launch.fields.name}</p>
+                      <p className={styles.details}>
+                        {launch.fields.launchDetails ? 
+                          launch.fields.launchDetails.slice(0, 300) + '...' : <i>Unknown</i>}
+                      </p>
+                    </Card>
                   </Card>
+                  
               </li>
             </Link>
           ))}
@@ -80,6 +82,5 @@ export default function Home({ launches }) {
           </p>
         </section>
       </div>
-    </div>
   );
 };

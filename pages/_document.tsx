@@ -5,7 +5,7 @@ export default class CustomDocument extends Document {
         return (
             <Html lang="en-US">
                 <Head>
-                    <title>SpaceX Log</title>
+                    {/* <title>SpaceX Log</title> */}
                 </Head>
                 <body>
                     <Main/>
