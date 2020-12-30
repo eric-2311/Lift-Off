@@ -10,7 +10,8 @@
 .logo {
     color: red;
     font-size: 40px;
-    padding: 20px;
+    /* padding: 20px; */
+    width: 350px;
 }
 
 .logo:hover {
@@ -30,10 +31,7 @@
     background-size: cover;
     position: relative;
     text-align: center;
-    vertical-align: center;
-    /* background-color: #f1d592; */
     color: black;
-    /* border: 1px solid black; */
 }
 
 /* .cardOpen {
@@ -51,14 +49,23 @@
     display: block;
     transition: .2s;
     text-align: center;
+    z-index: 1;
     /* background-color: white; */
     background-image: none;
     top: 0;
     left: 0;
 }
 
+.card .details {
+    display: none;
+}
+
 .card:hover .title {
     line-height: normal;
+}
+
+.card:hover .details {
+    display: block;
 }
 
 .title {
@@ -80,19 +87,10 @@
     padding: 10px;
 }
 
-.card .details {
-    display: none;
-}
-
 .text {
     /* color: white; */
     text-align: center;
     padding-bottom: 50px;
-}
-
-.card:hover .details {
-    display: block;
-    /* text-rendering: optimizeSpeed; */
 }
 
 .section {
