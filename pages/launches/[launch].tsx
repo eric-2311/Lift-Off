@@ -38,14 +38,15 @@ export default function Launch({ launch }) {
 
     if (!launch) return <div>404</div>
 
-    // function getLocalDate(date) {
-
-    // }
+    function getLocalDate(date) {
+        let local = new Date(date);
+        return local.toString()
+    }
 
     return (
         <div>
             <h1>{launch.fields.name}</h1>
-            <p>{launch.fields.launchDate}</p>
+            <p>{getLocalDate(launch.fields.launchDate)}</p>
             <section>
                 <p>{launch.fields.missionSuccess ? 
                 'Mission Success' : 
@@ -61,7 +62,8 @@ export default function Launch({ launch }) {
             </p>
             <ReactPlayer 
                 url={launch.fields.webcastVideoUrl} 
-                playing={isPlaying}/>
+                // playing={isPlaying}
+                />
         </div>
     )
 }

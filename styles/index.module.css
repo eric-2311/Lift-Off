@@ -3,9 +3,9 @@
     flex-direction: row;
 }
 
-.nav {
+/* .nav {
     background-color: black;
-}
+} */
 
 .logo {
     color: red;
@@ -24,31 +24,47 @@
 
 .card {
     width: 150px;
-    height: 30px;
+    height: 100px;
+    /* display: none; */
+    background-image: url('../public/manilla-folder-hi.png');
+    background-size: cover;
     position: relative;
-    background-color: #f1d592;
+    text-align: center;
+    vertical-align: center;
+    /* background-color: #f1d592; */
     color: black;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
-.cardOpen {
+/* .cardOpen {
     display: none;
+    height: 250px;
+    width: 250px;
     z-index: 1;
-}
+} */
 
-.card:hover .cardOpen {
-    position: absolute;
+.card:hover {
+    position: relative;
     height: 250px;
     width: 250px;
     cursor: pointer;
     display: block;
+    transition: .2s;
+    text-align: center;
+    /* background-color: white; */
+    background-image: none;
     top: 0;
     left: 0;
+}
+
+.card:hover .title {
+    line-height: normal;
 }
 
 .title {
     margin: auto;
     text-align: center;
+    line-height: 100px;
 }
 
 .list {
@@ -60,13 +76,23 @@
 
 .listItem {
     list-style: none;
+    position: relative;
     padding: 10px;
 }
 
+.card .details {
+    display: none;
+}
+
 .text {
-    color: white;
+    /* color: white; */
     text-align: center;
     padding-bottom: 50px;
+}
+
+.card:hover .details {
+    display: block;
+    /* text-rendering: optimizeSpeed; */
 }
 
 .section {
