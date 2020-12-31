@@ -16,7 +16,7 @@ export async function getStaticProps() {
   return {
     props: {
       launches: data.items,
-      revalidate: 1
+      revalidate: 60
     }
   }
 }
@@ -50,6 +50,7 @@ export default function Home({ launches }) {
             <i>
               "In order for us to have a future that's exciting and inspiring, it has to be 
               one where we're a space-bearing civilization"
+              <br/>
               <br/> 
               - Elon Musk
             </i>
@@ -59,6 +60,7 @@ export default function Home({ launches }) {
               “I know the sky is not the limit because there are footprints on the Moon — and I 
               made some of them!”
               <br/> 
+              <br/>
               - Buzz Aldrin
             </i>
           </p>
@@ -66,6 +68,7 @@ export default function Home({ launches }) {
             <i>
               "That's one small step for a man, one giant leap for man-kind"
               <br/> 
+              <br/>
               - Louis Armstrong
             </i>
           </p>
@@ -77,6 +80,7 @@ export default function Home({ launches }) {
               we are willing to accept, one we are unwilling to postpone, and one which we intend 
               to win.”
               <br/> 
+              <br/>
               - John F. Kennedy
             </i>
           </p>

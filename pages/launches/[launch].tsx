@@ -30,7 +30,7 @@ export async function getStaticProps({ params }) {
         props: {
             launch: data.items[0]
         },
-        revalidate: 1
+        revalidate: 60
     }
 }
 
@@ -48,7 +48,6 @@ export default function Launch({ launch }) {
         <div>
             <h1 className={styles.title}>{launch.fields.name}</h1>
             <div className={styles.content}>
-                
                 <ReactPlayer
                     className={styles.player} 
                     url={launch.fields.webcastVideoUrl} 
@@ -73,6 +72,7 @@ export default function Launch({ launch }) {
                         <div className={styles.patch}>
                             <img src={launch.fields.missionPatchUrl} />
                         </div>
+                        
                     </div>
                     <p className={styles.launchDetails}>
                         {launch.fields.launchDetails ? 

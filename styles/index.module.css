@@ -1,6 +1,7 @@
 .pageContainer {
     display: flex;
     flex-direction: row;
+    margin-bottom: 150px;
 }
 
 /* .nav {
@@ -26,12 +27,14 @@
 .card {
     width: 150px;
     height: 100px;
-    /* display: none; */
+    display: flex;
     background-image: url('../public/manilla-folder-hi.png');
     background-size: cover;
+    /* background-color: yellow !important; */
     position: relative;
     text-align: center;
     color: black;
+    /* z-index: 1; */
 }
 
 /* .cardOpen {
@@ -42,14 +45,14 @@
 } */
 
 .card:hover {
-    position: relative;
+    /* position: relative; */
     height: 250px;
     width: 250px;
     cursor: pointer;
     display: block;
     transition: .2s;
     text-align: center;
-    z-index: 1;
+    z-index: 999;
     /* background-color: white; */
     background-image: none;
     top: 0;
@@ -71,7 +74,8 @@
 .title {
     margin: auto;
     text-align: center;
-    line-height: 100px;
+    /* line-height: 100px; */
+
 }
 
 .list {
@@ -84,7 +88,9 @@
 .listItem {
     list-style: none;
     position: relative;
-    padding: 10px;
+    /* padding: 10px; */
+    height: 150px;
+    width: 200px;
 }
 
 .text {
@@ -96,5 +102,5 @@
 .section {
     display: flex;
     flex-direction: column;
-    position: relative;
+    /* position: absolute; */
 }
