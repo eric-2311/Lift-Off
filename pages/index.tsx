@@ -32,13 +32,10 @@ export default function Home({ launches }) {
                     <p className={styles.title}>
                       <i>{launch.fields.name}</i>
                     </p>
-                    {/* <Card className={styles.cardOpen}> */}
-                      {/* <p className={styles.title}>{launch.fields.name}</p> */}
                       <p className={styles.details}>
                         {launch.fields.launchDetails ? 
                           launch.fields.launchDetails.slice(0, 300) + '...' : <i>Unknown</i>}
                       </p>
-                    {/* </Card> */}
                   </Card>
                   
               </li>

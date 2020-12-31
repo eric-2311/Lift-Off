@@ -5,7 +5,7 @@
 
 .context {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .info {
@@ -23,6 +23,7 @@
     flex-direction: column;
     position: relative;
     width: 50%;
+    margin-left: 10px;
 }
 
 .patch {
