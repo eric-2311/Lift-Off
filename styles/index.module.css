@@ -28,6 +28,9 @@
     width: 150px;
     height: 100px;
     display: flex;
+    /* vertical-align: middle; */
+    /* align-items: center; */
+    /* justify-content: center; */
     background-image: url('../public/manilla-folder-hi.png');
     background-size: cover;
     /* background-color: yellow !important; */
@@ -49,7 +52,7 @@
     height: 250px;
     width: 250px;
     cursor: pointer;
-    display: block;
+    /* display: block; */
     transition: .2s;
     text-align: center;
     z-index: 999;
@@ -72,8 +75,9 @@
 }
 
 .title {
-    margin: auto;
+    /* margin: auto; */
     text-align: center;
+    /* display: flex; */
     /* line-height: 100px; */
 
 }
