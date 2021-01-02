@@ -9,7 +9,7 @@ export default class CustomDocument extends Document {
                     <meta property="og:title" content="SpaceX Mission Log"/>
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="http://localhost:3000/"/>
-                    <meta property="og:image" content="" />
+                    <meta property="og:image" content="%PUBLIC_URL%/meta-pic.png" />
                 </Head>
                 <body>
                     <Main/>
