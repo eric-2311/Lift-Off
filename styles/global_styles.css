@@ -1,6 +1,4 @@
 body {
     background-image: url('../public/background.jpg');
-    background-size: cover;
-    background-color: lightgray;
-    /* height: 110%; */
+    background-size: cover
 }
