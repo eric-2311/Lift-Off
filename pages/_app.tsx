@@ -10,11 +10,11 @@ function MyApp({ Component, pageProps }) {
           <title>SpaceX Logs</title>
       </Head>
       <nav className={styles.nav}>
+        <Link href={'/'}>
         <h1 className={styles.logo}>
-          <Link href={'/'}>
-            <i>SpaceX Mission Log</i>
-          </Link>
+            <i>SpaceX Mission Log</i>       
         </h1>
+        </Link>
       </nav>
       <Component {...pageProps}/>
     </div>
