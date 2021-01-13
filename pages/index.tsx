@@ -3,7 +3,6 @@ import Link from 'next/link';
 import '@contentful/forma-36-react-components/dist/styles.css';
 import styles from '../styles/index.module.css';
 
-
 const client = require("contentful").createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
   accessToken: process.env.NEXT_CONTENTFUL_ACCESS_TOKEN
