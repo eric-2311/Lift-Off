@@ -15,9 +15,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      launches: data.items,
-      revalidate: 60
-    }
+      launches: data.items
+    },
+    revalidate: 60
   }
 }
 
