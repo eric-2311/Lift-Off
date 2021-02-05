@@ -37,7 +37,6 @@ export default function Home({ launches }) {
                           launch.fields.launchDetails.slice(0, 300) + '...' : <i>Unknown</i>}
                       </p>
                   </Card>
-                  
               </li>
             </Link>
           ))}
